@@ -8,7 +8,7 @@ import './index.css';
       constructor(props) {
         super(props);
         this.state = { items: [] };
-        // this.handleChange = this.handleChange.bind(this);
+        this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
       }
     
@@ -27,7 +27,7 @@ import './index.css';
           </ul>
             <form onSubmit={this.handleSubmit}>
               <input type="text"
-               // onChange={this.handleChange}
+                onChange={this.handleChange}
                 value={this.state.text}
               />
               <button>
@@ -40,9 +40,9 @@ import './index.css';
       }
     
     
-      // handleChange(e) {
-      //   this.setState({ text: e.target.value });
-      // }
+      handleChange(e) {
+        this.setState({ text: e.target.value });
+      }
     
       handleSubmit(x) {
         x.preventDefault();
@@ -59,15 +59,15 @@ import './index.css';
     } 
     
     
-    class TodoList extends Component {
-      render() {
-        return (
-          <div>
-           <h1>Hello world</h1>
-            </div>
-        );
-      }
-    }
+    // class TodoList extends Component {
+    //   render() {
+    //     return (
+    //       <div>
+    //        <h1>Hello world</h1>
+    //         </div>
+    //     );
+    //   }
+    // }
     // const listItem= this.setState({counter:this.state.counter+1})
     export default App;
     
